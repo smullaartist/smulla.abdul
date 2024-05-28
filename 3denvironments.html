@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9ad003344.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>3D Environments</title>
+</head>
+<body>
+    <div class="smulla">
+        <img src="images/logo.png" class="logo" alt="Logo">
+    </div>
+    <section class="showcase">
+            <div class="content">
+                <nav>
+                    <ul id="sidemenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#portfolio">Projects</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <h2 class="env-title">3D Environments</h2>
+            </div>
+    </section>
+
+    <section class="container3denvironments">
+        <div class="Home-col-1">
+            <div class="slider-wrapper">
+                <div class="slider home-slider">
+                    <img id="Homeslide-1" src="images/HomeRender1.png" alt="HomeRender1">
+                    <img id="Homeslide-2" src="images/HomeRender2.png" alt="HomeRender2">
+                    <img id="Homeslide-3" src="images/HomeRender3.png" alt="HomeRender3">
+                    <video id="Homeslide-4" src="videos/HomeRender4.mp4" alt="HomeRender4" autoplay loop muted></video>
+                    <img id="Homeslide-5" src="images/HomeRender5.png" alt="HomeRender5">
+                    <img id="Homeslide-6" src="images/HomeRender6.png" alt="HomeRender6">
+                    <video id="Homeslide-7" src="videos/HomeRender7.mp4" alt="HomeRender7" autoplay loop muted></video>
+                    <img id="Homeslide-8" src="images/HomeRender8.png" alt="HomeRender8">
+                    <video id="Homeslide-9" src="videos/HomeRender9.mp4" alt="HomeRender9" autoplay loop muted></video>
+                </div>
+                <div class="slider-nav">
+                    <a href="#Homeslide-1"></a>
+                    <a href="#Homeslide-2"></a>
+                    <a href="#Homeslide-3"></a>
+                    <a href="#Homeslide-4"></a>
+                    <a href="#Homeslide-5"></a>
+                    <a href="#Homeslide-6"></a>
+                    <a href="#Homeslide-7"></a>
+                    <a href="#Homeslide-8"></a>
+                    <a href="#Homeslide-9"></a>
+                </div>
+            </div>
+            <h1 class="Home-title">Home (an abandoned orphanage)</h1>
+            <p>Home is an abandoned orphanage set in the late 1900s. This was the project 
+                I ended up submitting as my final year assignment. The game's premise was 
+                that you played as a detective, attempting to unravel the mystery of why 
+                this orphanage was abandoned. To solve this mystery, the player needed to 
+                find all of the paper cranes scattered throughout the environment which 
+                each told the player some information about it's abandonment. Despite the 
+                challenges that came with this project, I had a lot of fun working on it 
+                and would love to create something on a bigger scale in the future. All 
+                the environments, models (some) and textures were made by myself using MAYA, 
+                Substance Painter and Unreal Engine 5.</p>
+        </div>
+        <div class="Deceit-col-1">
+            <div class="slider-wrapper">
+                <div class="slider deceit-slider">
+                    <img id="Deceitslide-1" src="images/DeceitRender1.png" alt="DeceitRender1">
+                    <img id="Deceitslide-2" src="images/DeceitRender2.png" alt="DeceitRender2">
+                    <video id="Deceitslide-3" src="videos/DeceitRender3.mp4" alt="DeceitRender3" autoplay loop muted></video>
+                    <img id="Deceitslide-4" src="images/DeceitRender4.png" alt="DeceitRender4">
+                    <img id="Deceitslide-5" src="images/DeceitRender5.png" alt="DeceitRender5">
+                    <video id="Deceitslide-6" src="videos/DeceitRender6.mp4" alt="DeceitRender6" autoplay loop muted></video>
+                    <img id="Deceitslide-7" src="images/DeceitRender7.png" alt="DeceitRender7">
+                    <video id="Deceitslide-8" src="videos/DeceitRender8.mp4" alt="DeceitRender8" autoplay loop muted></video>
+                    <img id="Deceitslide-9" src="images/DeceitRender9.png" alt="DeceitRender9">
+                </div>
+                <div class="slider-nav">
+                    <a href="#Deceitslide-1"></a>
+                    <a href="#Deceitslide-2"></a>
+                    <a href="#Deceitslide-3"></a>
+                    <a href="#Deceitslide-4"></a>
+                    <a href="#Deceitslide-5"></a>
+                    <a href="#Deceitslide-6"></a>
+                    <a href="#Deceitslide-7"></a>
+                    <a href="#Deceitslide-8"></a>
+                    <a href="#Deceitslide-9"></a>
+                </div>
+            </div>
+            <h1 class="Deceit-title">Deceit</h1>
+            <p>Deceit is a 3D environment based on an underground mine and a glow worm 
+                cave. Inspired by the fascinating glow worm caves found in real life, 
+                this creation started as a university assignment and after revisiting 
+                to make thorough tweaks and refinements, I've re-rendered and showcased 
+                the finished version here. Hope y'all are messing with it! All the environments, 
+                models and textures were made by myself using 3DS Max, Substance Painter and 
+                Unreal Engine 5.</p>
+        </div>
+    </section>
+
+    <script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const handleSliderNavigation = (sliderNavLinks, sliderItems) => {
+        let currentIndex = 0;
+        const totalItems = sliderItems.length;
+        let timer;
+
+        const showItem = (index) => {
+            sliderItems.forEach((item, i) => {
+                if (i === index) {
+                    item.style.display = 'block';
+                    if (item.tagName === 'VIDEO') {
+                        item.play();
+                        item.onended = nextItem; // Move to the next slide when the video ends
+                    }
+                    item.classList.add('show');
+                } else {
+                    item.style.display = 'none';
+                    if (item.tagName === 'VIDEO') {
+                        item.pause();
+                        item.onended = null; // Remove the event listener to avoid memory leaks
+                    }
+                    item.classList.remove('show');
+                }
+            });
+            resetTimer(); // Reset the timer whenever a new item is shown
+        };
+
+        const nextItem = () => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            showItem(currentIndex);
+        };
+
+        const resetTimer = () => {
+            clearInterval(timer);
+            timer = setInterval(nextItem, 5000); // Always switch to the next item after 5 seconds
+        };
+
+        sliderNavLinks.forEach((link, index) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                currentIndex = index;
+                showItem(currentIndex);
+                sliderNavLinks.forEach(nav => nav.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        // Initialize the slider
+        showItem(currentIndex);
+    };
+
+    // Handle Home slider
+    const homeSliderNavLinks = document.querySelectorAll('.Home-col-1 .slider-nav a');
+    const homeSliderItems = document.querySelectorAll('.home-slider img, .home-slider video');
+    handleSliderNavigation(homeSliderNavLinks, homeSliderItems);
+
+    // Handle Deceit slider
+    const deceitSliderNavLinks = document.querySelectorAll('.Deceit-col-1 .slider-nav a');
+    const deceitSliderItems = document.querySelectorAll('.deceit-slider img, .deceit-slider video');
+    handleSliderNavigation(deceitSliderNavLinks, deceitSliderItems);
+});
+</script>
+
+
+</body>
+</html>
