@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9ad003344.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <title>About</title>
+</head>
+<body>
+    <div class="smulla">
+        <img src="images/logo.png" class="logo" alt="Logo">
+    </div>
+    <section class="showcase">
+        <div class="video-container">
+            <video src="videos/videoBackgroundProfile.mp4" autoplay muted loop></video>
+        </div>
+        <div class="content">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html"style="color: #FA2A55;">PROFILE</a></li> 
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <h2 class="env-title">PROFILE</h2>
+        </div>
+    </section>
+    <div id="about" class="about">
+        <div class="container">
+            <div class="text-position">
+                <div class="text-description">
+                    <p>
+                        My name is Smulla, also known as Shaun. I'm a graduate in Video Games Art & Design from Royal Holloway, University of London. I'm 21 years old and currently live 
+                        in East London. I'm a self-proclaimed artist who is constantly seeking opportunities to expand and express creativity. My passion for learning drives me to master 
+                        various forms of art, whether it’s games, 2D, 3D, animation, photography and beyond. If I don’t know how to do something, I’ll learn it. I firmly believe that 
+                        with determination and the vast resources available on the internet, anyone can learn to do anything. This has been and is how I have 'created everything I've ever made.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>3D Modeler</span><br>Modelling, Unwrapping & Texturing 3D Assets</li>
+                            <li><span>Environment Artist</span><br>Creating 3D Environments</li>
+                            <li><span>Games Designer</span><br>Creating Video Games</li>
+                            <li><span>Photographer & Videographer</span><br>Capturing Photos & Videos</li>
+                            <li><span>Graphic Designer</span><br>Making & Designing Graphics</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>None</span><br>Please Hire Me!</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>September 2013 - June 2018</span><br>Sydney Russell School</li>
+                            <li><span>September 2018 - July 2020</span><br>Southern Consortium Sixth Form</li>
+                            <li><span>September 2020 - June 2023</span><br>Royal Holloway, University of London</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    
+    </script>
+</body>
+</html>

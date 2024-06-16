@@ -1,0 +1,193 @@
+/* Your existing styles */
+/* General styles */
+.text-position, .streetphotography-position {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.text-title {
+    font-size: 23.04px;
+    font-weight: bold;
+    color: #F2F2F2;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0.25rem;
+}
+
+.text-description {
+    font-size: 16px;
+    color: #F2F2F2;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* Video background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    opacity: 25%;
+}
+
+/* Gallery styles */
+.gallery {
+    max-width: 1200px; /* Adjust as needed */
+    margin: -500px auto 0; /* Margin adjusted to move gallery higher up */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the gallery horizontally */
+    gap: 30px;
+    margin-bottom: 1.5rem;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center; /* Center the images horizontally */
+    z-index: 2;
+}
+
+.image-container img {
+    max-width: 400px; /* Increase width of images */
+    height: auto;
+    max-height: 300px; /* Adjust maximum height of images */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
+    filter: grayscale(100%);
+    border-radius: 5px;
+}
+
+.image-container img:hover {
+    opacity: 1; /* Increase opacity on hover */
+    transform: scale(1.05); /* Scale the image slightly on hover */
+    filter: grayscale(0%);
+}
+
+/* Enlarged image display */
+.full-img {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    text-align: center;
+    overflow: auto; /* Enable scrolling for large images */
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 80%; /* Adjust maximum width as needed */
+    max-height: 80%; /* Adjust maximum height as needed */
+    height: 80vh; /* Use viewport height to center vertically */
+    box-sizing: border-box;
+    padding: 20px; /* Optional: Add padding for better visual appearance */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+
+.img-container img {
+    max-width: 100%; /* Ensure images scale within container */
+    max-height: 100%; /* Ensure images scale within container */
+    object-fit: contain; /* Maintain aspect ratio and fit within container */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.full-img .close-btn {
+    position: absolute;
+    top: 815px;
+    right: 920px;
+    color: #F2F2F2;
+    font-size: 24px;
+    font-weight: bold; /* Make the close button text bold */
+    cursor: pointer;
+    z-index: 1001; /* Ensure close button is above the image */
+    transition: color 0.3s; /* Add transition effect for color change */
+}
+
+.full-img .close-btn:hover {
+    color: #FA2A55; /* Change color to white on hover */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .image-container img {
+        max-width: calc(50% - 15px); /* Adjust image width for smaller screens */
+        max-height: auto;
+    }
+}
+
+.vfx-button {
+    position: fixed;
+    right: 250px;
+    top: 24.5%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #F2F2F2;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1; /* Ensure the button is on top of other elements */
+}
+
+.photographyandvideography-button {
+    position: fixed;
+    right: 1480px;
+    top: 24.5%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #F2F2F2;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1; /* Ensure the button is on top of other elements */
+}
+
+.vfx-button:hover, .photographyandvideography-button:hover {
+    background-color: #FA2A55;
+}
+
+.vfx-button i, .photographyandvideography-button i {
+    margin-right: 4px;
+}
+
