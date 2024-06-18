@@ -128,13 +128,11 @@ nav ul li a:hover::after{
 
 /* Existing CSS */
 
-/* Existing CSS */
-
 #contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 195px;
+    margin-top: 270px;
     width: 100%; /* Ensure it takes the full width of the page */
 }
 
@@ -179,10 +177,9 @@ nav ul li a:hover::after{
     margin: auto; /* Center the form container */
 }
 
-
 .btn, .btn.btn2 {
     display: block;
-    margin: 50px auto; /* Center horizontally */
+    margin: 0px auto; /* Reduced from 50px to 20px to move it higher */
     width: fit-content;
     padding: 12.5px 30px;
     border-radius: 25px;
@@ -236,7 +233,7 @@ form textarea {
 form .btn2 {
     padding: 14px 60px;
     font-size: 19.2px;
-    margin-top: 20px;
+    margin-top: 0px; /* Adjusted margin-top to move the button higher */
     cursor: pointer;
     display: block;
     margin: 0 auto; /* Centers the button horizontally */
@@ -244,6 +241,7 @@ form .btn2 {
     border: none; /* Remove border */
     font-family: Arial, sans-serif; /* Specify your preferred font stack */
 }
+
 
 .social-icons-overlay {
     position: absolute;
@@ -361,7 +359,7 @@ nav .fa-bars{
 }
 
 .text-position {
-    top: -60px;
+    top: -62px;
     max-width: 762.5px;
     width: 100%; /* Ensures the container width doesn't exceed 720px */
     margin: -38rem auto; /* Centers the element horizontally */
@@ -440,5 +438,4 @@ form textarea::placeholder {
     transform: translate(-50%, -50%);
     opacity: 25%;
 }
-
 
