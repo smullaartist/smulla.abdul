@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9ad003344.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+    <title>Projects</title>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="videos/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="smulla">
+        <img src="images/logo.png" class="logo" alt="Logo">
+    </div>
+    <section class="showcase">
+        <div class="content">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">PROFILE</a></li>
+                    <li><a href="projects.html" style="color: #FA2A55;">PROJECTS</a></li> 
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <h2 class="env-title">PROJECTS</h2>
+        </div>
+    </section>
+    <div class="section-container">
+        <div class="showreel">
+            <div class="showreel-item" onclick="openVideoModal('https://www.youtube.com/embed/_BXLwFhZ6P8')">
+                <img src="images/imgShowreel.jpg" alt="Showreel">
+                <div class="showreel-text">UNIVERSITY SHOWREEL (2021-2023)</div>
+            </div>
+        </div>
+        <div class="models3d">
+            <div class="models3d-item"> 
+                <a href="3dmodels.html"><img src="images/img3DModels.jpg" alt="3D Models"></a>
+                <div class="models3d-text">3D MODELS</div>
+            </div>
+        </div>
+        <div class="environments3d">
+            <div class="environments3d-item">
+                <a href="3denvironments.html"><img src="images/img3DEnvironments.jpg" alt="3D Environments"></a>
+                <div class="environments3d-text">3D ENVIRONMENTS</div>
+            </div>
+        </div>
+        <div class="photographyandvideography">
+            <div class="photographyandvideography-item">
+                <a href="photography&videography.html"><img src="images/imgPhotography&Videography.jpg" alt="Photography & Videography"></a>
+                <div class="photographyandvideography-text">PHOTOGRAPHY & VIDEOGRAPHY</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for video -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideoModal()">&times;</span>
+            <iframe id="videoFrame" width="1024" height="576" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+
+    <script>
+
+        // JavaScript functions for modal
+        function openVideoModal(videoUrl) {
+            var modal = document.getElementById('videoModal');
+            var videoFrame = document.getElementById('videoFrame');
+            videoFrame.src = videoUrl;
+            modal.style.display = 'flex'; // Use 'flex' to center vertically
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeVideoModal() {
+            var modal = document.getElementById('videoModal');
+            var videoFrame = document.getElementById('videoFrame');
+            modal.style.display = 'none';
+            videoFrame.src = ''; // Reset video source
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+    </script>
+</body>
+</html>

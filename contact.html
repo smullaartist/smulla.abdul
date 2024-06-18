@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a9ad003344.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="3denvironments.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gill+Sans+Extrabold&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
     <title>Contact</title>
 </head>
+
 <body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="videos/videoBackgroundContact.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <div class="smulla">
         <img src="images/logo.png" class="logo" alt="Logo">
     </div>
+
     <section class="showcase">
         <div class="content">
             <nav>
@@ -26,36 +34,41 @@
             </nav>
             <h2 class="env-title">CONTACT</h2>
         </div>
-    </section>
 
-    <!----------contact---------->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope"></i> smulla.artist@gmail.com</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/smulla.artist/"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@smulla.artist"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="https://www.linkedin.com/in/shaun-anderson-a7154a20a/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.artstation.com/smulla"><i class="fa-brands fa-artstation"></i></a>
-                        <a href="https://smulla.gumroad.com/"><i class="fa-solid fa-g"></i></a>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <div class="button-container">
+                                <button type="submit" class="btn btn2">SUBMIT</button>
+                                <a href="images/CV.pdf" download class="btn btn2">DOWNLOAD CV</a>
+                            </div>
+                        </form>
+                        <span id="msg"></span>
                     </div>
-                    <a href="images/CV.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
                 </div>
             </div>
         </div>
+    </section>
+
+    <div class="text-position">
+        <p class="text-description">Below you can contact me. Employers can download my CV and reach out to me through the provided contact form. If you'd like to collaborate or have any inquiries, please contact me through one of the social media links.</p>
     </div>
+    
+    <div class="social-icons-overlay">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/smulla.artist/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@smulla.artist" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/in/shaun-anderson-a7154a20a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.artstation.com/smulla" target="_blank"><i class="fab fa-artstation"></i></a>
+            <a href="https://smulla.gumroad.com/" target="_blank"><i class="fab fa-g"></i></a>
+        </div>
+    </div>
+    
 
     <script>
         var sidemenu = document.getElementById("sidemenu");
@@ -66,22 +79,34 @@
             sidemenu.style.right = "-200px";
         }
     </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyyqq3rT4GBQbNapfTryz2TdJ56wY2wxywhNI4Rd60X3OdqzXZVu5PB8LdTIjBjEPIK/exec';
-        const form = document.forms['submit-to-google-sheet'];
-        const msg = document.getElementById("msg");
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully";
-                    setTimeout(function(){
-                        msg.innerHTML = "";
-                    },5000);
-                    form.reset();
-                })
-                .catch(error => console.error('Error!', error.message));
-        });
-    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyyqq3rT4GBQbNapfTryz2TdJ56wY2wxywhNI4Rd60X3OdqzXZVu5PB8LdTIjBjEPIK/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const submitBtn = form.querySelector('.btn.btn2'); // Select the submit button
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                // Update button text to "SENT" temporarily
+                submitBtn.textContent = "SENT";
+                submitBtn.style.backgroundColor = "#21ADA8"; // Change button color to green
+                submitBtn.disabled = true; // Disable the button
+
+                setTimeout(function(){
+                    // Revert button text back to "SUBMIT" after 1.5 seconds
+                    submitBtn.textContent = "SUBMIT";
+                    submitBtn.style.backgroundColor = ""; // Reset button color
+                    submitBtn.disabled = false; // Re-enable the button
+                }, 1500);
+
+                // Reset the form
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
+</script>
+
 </body>
 </html>

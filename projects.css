@@ -1,0 +1,189 @@
+html, body {
+    overflow: hidden; /* Prevent scrolling */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*----------projects----------*/
+.section-container {
+    margin-top: -5px; /* Move the content up by 50px */
+    padding-top: 0;    /* Ensure there's no padding at the top */
+}
+
+/* Container Styles */
+.models3d, .environments3d, .photographyandvideography, .other, .showreel, .thecycleoflife, .games2D,
+.streetphotography, .offthegrid, .axiom, .joji, .vfx, .deceit, .home {
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Control horizontal and vertical spacing between items */
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Item Styles */
+.models3d-item, .environments3d-item, .photographyandvideography-item, .other-item, .showreel-item, 
+.thecycleoflife-item, .games2D-item, .streetphotography-item, .offthegrid-item, .axiom-item, 
+.joji-item, .vfx-item, .deceit-item, .home-item {
+    position: relative;
+    width: 260px; /* Set a fixed width for the items */
+    flex: 0 1 260px; /* Allow the items to grow/shrink as needed */
+    padding: 0; /* Remove padding between items */
+    box-sizing: border-box; /* Include padding and border in width/height calculations */
+}
+
+/* Image Styles */
+.models3d img, .environments3d img, .photographyandvideography img, .other img, .showreel img, 
+.thecycleoflife img, .games2D img, .streetphotography img, .offthegrid img, .axiom img, .joji img, 
+.vfx img, .deceit img, .home img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.1s ease, filter 0.1s ease;
+    cursor: pointer;
+    display: block; /* Remove inline element space */
+    margin: 0; /* Remove additional margins */
+    padding: 0; /* Remove additional padding */
+}
+
+/* Image Hover Effect */
+.models3d img:hover, .environments3d img:hover, .photographyandvideography img:hover, .other img:hover, 
+.showreel img:hover, .thecycleoflife img:hover, .games2D img:hover, .streetphotography img:hover, 
+.offthegrid img:hover, .axiom img:hover, .joji img:hover, .vfx img:hover, .deceit img:hover, .home img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.5);
+}
+
+/* Text Styles */
+.models3d-text, .environments3d-text, .photographyandvideography-text, .other-text, .showreel-text, 
+.thecycleoflife-text, .games2D-text, .streetphotography-text, .offthegrid-text, .axiom-text, .joji-text, 
+.vfx-text, .deceit-text, .home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 20px; /* Increased font size */
+    font-weight: bold; /* Bold text */
+    color: #F2F2F2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: opacity 0.1s ease;
+    pointer-events: none; /* Ensure text does not interfere with image clicks */
+}
+
+/* Text Hover Effect */
+.models3d-item:hover .models3d-text, .environments3d-item:hover .environments3d-text, 
+.photographyandvideography-item:hover .photographyandvideography-text, .other-item:hover .other-text, 
+.showreel-item:hover .showreel-text, .thecycleoflife-item:hover .thecycleoflife-text, 
+.games2D-item:hover .games2D-text, .streetphotography-item:hover .streetphotography-text, 
+.offthegrid-item:hover .offthegrid-text, .axiom-item:hover .axiom-text, .joji-item:hover .joji-text, 
+.vfx-item:hover .vfx-text, .deceit-item:hover .deceit-text, .home-item:hover .home-text {
+    opacity: 1;
+}
+
+
+/* Image Hover Effect */
+.models3d img:hover, .environments3d img:hover, .photographyandvideography img:hover, .other img:hover, 
+.showreel img:hover, .thecycleoflife img:hover, .games2D img:hover, .streetphotography img:hover, 
+.offthegrid img:hover, .axiom img:hover, .joji img:hover, .vfx img:hover, .deceit img:hover, .home img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.5);
+}
+
+/* Text Styles */
+.models3d-text, .environments3d-text, .photographyandvideography-text, .other-text, .showreel-text, 
+.thecycleoflife-text, .games2D-text, .streetphotography-text, .offthegrid-text, .axiom-text, .joji-text, 
+.vfx-text, .deceit-text, .home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 23.04px; /* Increased font size */
+    font-weight: bold; /* Bold text */
+    color: #F2F2F2;
+    padding: 10px 30px; /* Adjusted padding for more horizontal space */
+    border-radius: 5px;
+    transition: opacity 0.1s ease;
+    pointer-events: none; /* Ensure text does not interfere with image clicks */
+    width: 260px; /* Adjusted width for more horizontal space */
+    text-align: center; /* Center text horizontally */
+}
+
+/* Text Hover Effect */
+.models3d-item:hover .models3d-text, .environments3d-item:hover .environments3d-text, 
+.photographyandvideography-item:hover .photographyandvideography-text, .other-item:hover .other-text, 
+.showreel-item:hover .showreel-text, .thecycleoflife-item:hover .thecycleoflife-text, 
+.games2D-item:hover .games2D-text, .streetphotography-item:hover .streetphotography-text, 
+.offthegrid-item:hover .offthegrid-text, .axiom-item:hover .axiom-text, .joji-item:hover .joji-text, 
+.vfx-item:hover .vfx-text, .deceit-item:hover .deceit-text, .home-item:hover .home-text {
+    opacity: 1;
+}
+
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* Ensure it stays behind all other content */
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    opacity: 50%;
+}
+
+/* Existing styles remain unchanged */
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow-y: auto; /* Enable scrolling within the modal */
+}
+
+.modal-content {
+    position: relative;
+    margin: 7.5% auto;
+    width: 80%;
+    max-width: 1024px;
+    padding: 20px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: -75px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #F2F2F2;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #FA2A55;
+    text-decoration: none;
+}
+
