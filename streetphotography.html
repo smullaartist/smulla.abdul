@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9ad003344.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="photography&videography.css">
+    <title>Street Photography</title>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="images/logo.png" class="logo" alt="Logo">
+    </div>
+
+    <section class="showcase">
+        <div class="video-container-dark">
+            <video src="streetphotography/videos/videoBackground.mp4" autoplay muted loop></video>
+        </div>
+
+        <div class="content">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about-me.html">ABOUT ME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li class="small-screen-only"><a href="photography&videography.html">PHOTOGRAPHY & VIDEOGRAPHY</a></li>
+                    <li class="small-screen-only" ><a href="joji.html">JOJI - DIE FOR YOU (A FAN-MADE MUSIC VIDEO)</a></li>
+                    <li class="small-screen-only"><a href="offthegrid.html">OFF THE GRID</a></li>
+                    <li class="small-screen-only" ><a href="streetphotography.html" style="color: #FA2A55;">STREET PHOTOGRAPHY</a></li>
+                    <li class="small-screen-only" ><a href="vfx.html">VFX</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <h2 class="env-title">STREET PHOTOGRAPHY</h2>
+        </div>
+    </section>
+
+    <section class="containerstreetphotography">
+        <div class="text-position">
+            <div class="text-description">
+                <p>
+                    Fashion is a personal hobby of mine, and I'm fascinated by the diverse styles and opinions people have on it. Earlier this year, I decided to channel 
+                    this interest creatively by going around central London and photographing individuals whose fashion choices caught my eye. I plan to continue this project 
+                    and I'm currently brainstorming ways to expand it beyond just taking photos.
+                </p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-image-container">
+                    <img src="streetphotography/images/img1.jpg" alt="Image 1">
+                    <img src="streetphotography/images/img2.jpg" alt="Image 2">
+                    <img src="streetphotography/images/img3.jpg" alt="Image 3">
+                    <img src="streetphotography/images/img4.jpg" class="landscape" alt="Image 4">
+                    <img src="streetphotography/images/img5.jpg" alt="Image 5">
+                    <img src="streetphotography/images/img6.jpg" alt="Image 6">
+                    <img src="streetphotography/images/img7.jpg" alt="Image 7">
+                    <img src="streetphotography/images/img8.jpg" alt="Image 8">
+                </div>
+            </div>
+        
+            <div class="full-img" id="fullImgBox">
+                <div class="full-image-container">
+                    <img src="" id="fullImg" alt="Enlarged Image">
+                    <span class="close-btn" onclick="closeFullImg()">CLOSE</span>
+                </div>
+            </div>
+            <div class="text-position">
+                <div class="text-title">Production Details</div>
+                <div class="text-description">
+                    <p>Below is the equipment and software I used:</p>
+                    <ul>
+                        <li><strong>Camera:</strong> Canon EOS 250D</li>
+                        <li><strong>Lens:</strong> Canon EF-s 18-55mm f/4-5.6 IS STM</li>
+                        <li><strong>Software:</strong> Adobe Lightroom & Photoshop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-position">
+            <div class="text-description-center">
+                <p>
+                    Published on <a href="" style="font-weight: bold; color: #F2F2F2; text-decoration: none;" class="link">TBA</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <a href="vfx.html" class="next-button">
+        VFX<i class="fas fa-arrow-right" style="margin-left: 16px;"></i>
+    </a>
+
+    <a href="photography&videography.html" class="back-button">
+        <i class="fas fa-arrow-left" style="margin-right: 16px;"></i> PHOTOGRAPHY & VIDEOGRAPHY
+    </a>
+    
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        var barsIcon = document.querySelector(".fa-bars");
+        var timesIcon = document.querySelector(".fa-times");
+    
+        function openmenu() {
+            sidemenu.classList.add("show");
+            barsIcon.style.display = "none";
+            timesIcon.style.display = "block";
+        }
+    
+        function closemenu() {
+            sidemenu.classList.remove("show");
+            barsIcon.style.display = "block";
+            timesIcon.style.display = "none";
+        }
+    
+        // Event listeners for icons
+        barsIcon.addEventListener("click", openmenu);
+        timesIcon.addEventListener("click", closemenu);
+    
+        // Handle initial window size to show/hide icons based on screen size
+        function checkWindowSize() {
+            if (window.innerWidth > 990) {
+                barsIcon.style.display = "none";
+                timesIcon.style.display = "none";
+                sidemenu.classList.remove("show");
+            } else {
+                barsIcon.style.display = "block";
+                timesIcon.style.display = "none";
+            }
+        }
+    
+        checkWindowSize();
+    
+        // Handle window resize to maintain proper icon visibility
+        window.addEventListener("resize", function() {
+            checkWindowSize();
+        });
+
+        // JavaScript to toggle full image display
+        const images = document.querySelectorAll('.gallery-image-container img');
+        const fullImg = document.querySelector('.full-img');
+        const fullImgClose = document.querySelector('.full-img .close-btn');
+        const fullImgDisplay = document.querySelector('.full-img img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                fullImgDisplay.src = img.src;
+                fullImg.style.display = 'flex';
+            });
+        });
+
+        fullImgClose.addEventListener('click', () => {
+            fullImg.style.display = 'none';
+        });
+    </script> 
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9ad003344.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+    <title>Photography & Videography</title>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="images/logo.png" class="logo" alt="Logo">
+    </div>
+    <h2 class="env-title">PHOTOGRAPHY & VIDEOGRAPHY</h2>
+    <section class="showcase">
+        <div class="video-container">
+            <video src="videos/background.mp4" autoplay muted loop></video>
+        </div>
+
+        <div class="content">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about-me.html">ABOUT ME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li class="small-screen-only" ><a href="3denvironments.html">3D ENVIRONMENTS</a></li>
+                    <li class="small-screen-only" ><a href="photography&videography.html" style="color: #FA2A55;">PHOTOGRAPHY & VIDEOGRAPHY</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+        <div class="projects-container">
+            <div class="img-container">
+                <a href="joji.html"><img src="images/imgJoji.jpg" class="img" alt="Joji - Die For You (a fan-made Music Video)"></a>
+                <span>JOJI - DIE FOR YOU (A FAN-MADE MUSIC VIDEO)</span>
+            </div>
+            <div class="img-container">
+                <a href="offthegrid.html"><img src="images/imgOffTheGrid.jpg" class="img" alt="Off The Grid"></a>
+                <span>OFF THE GRID</span>
+            </div>
+            <div class="img-container">
+                <a href="axiom.html"><img src="images/imgAxiom.jpg" class="img" alt="Axiom"></a>
+                <span>AXIOM (TBA)</span>
+            </div>
+            <div class="img-container">
+                <a href="streetphotography.html"><img src="images/imgStreetPhotography.jpg" class="img" alt="Street Photography"></a>
+                <span>STREET PHOTOGRAPHY</span>
+            </div>
+            <div class="img-container">
+                <a href="vfx.html"><img src="images/imgVFX.jpg" class="img" alt="VFX"></a>
+                <span>VFX</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        var barsIcon = document.querySelector(".fa-bars");
+        var timesIcon = document.querySelector(".fa-times");
+    
+        function openmenu() {
+            sidemenu.classList.add("show");
+            barsIcon.style.display = "none";
+            timesIcon.style.display = "block";
+        }
+    
+        function closemenu() {
+            sidemenu.classList.remove("show");
+            barsIcon.style.display = "block";
+            timesIcon.style.display = "none";
+        }
+    
+        // Event listeners for icons
+        barsIcon.addEventListener("click", openmenu);
+        timesIcon.addEventListener("click", closemenu);
+    
+        // Handle initial window size to show/hide icons based on screen size
+        function checkWindowSize() {
+            if (window.innerWidth > 990) {
+                barsIcon.style.display = "none";
+                timesIcon.style.display = "none";
+                sidemenu.classList.remove("show");
+            } else {
+                barsIcon.style.display = "block";
+                timesIcon.style.display = "none";
+            }
+        }
+    
+        checkWindowSize();
+    
+        // Handle window resize to maintain proper icon visibility
+        window.addEventListener("resize", function() {
+            checkWindowSize();
+        });
+    </script>
+</body>
+</html>

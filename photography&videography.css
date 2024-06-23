@@ -1,0 +1,298 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Global Styles */
+.containerjoji,
+.containeroffthegrid,
+.containerstreetphotography,
+.containervfx {
+    padding: 20px;
+    position: relative;
+    margin-top: -42.5rem; /* Adjust as needed */
+    z-index: 2;
+}
+
+/*----------joji----------*/
+.image-container {
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.image-container a {
+    display: inline-block;
+    position: relative;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s, filter 0.5s, opacity 0.5s ease;
+    filter: grayscale(100%);
+}
+
+.image-container .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f2f2f2;
+    font-size: 23.04px;
+    opacity: 0;
+    pointer-events: none;
+    font-weight: bold;
+    transition: opacity 0.5s ease;
+}
+
+.image-container a:hover img {
+    filter: grayscale(0%);
+}
+
+.image-container a:hover .overlay {
+    opacity: 1;
+}
+
+/*----------offthegrid----------*/
+.containeroffthegrid {
+    margin-top: -42.5rem; /* Adjust as needed */
+}
+
+.slider-container {
+    position: relative;
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.slider img {
+    width: 100%;
+    max-width: 540px;
+    border-radius: 5px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: #fa2a55;
+    border: none;
+    padding: 10px;
+    font-size: 19.2px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-btn.left {
+    left: 0;
+}
+
+.slider-btn.right {
+    right: 0;
+}
+
+.slider-nav {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.slider-nav a {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.slider-nav a.active {
+    background-color: #fa2a55;
+}
+
+/* video */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.video-wrapper video {
+    border-radius: 5px;
+    max-width: 360px;
+    width: 100%;
+}
+
+/* streetphotography */
+.gallery {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Adjust margin to position gallery */
+    padding: 0 20px; /* Adjust padding for spacing around images */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the gallery horizontally */
+    gap: 20px;
+}
+
+.gallery-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the images horizontally */
+    position: relative;
+    margin-bottom: 1rem;
+    z-index: 2;
+    text-align: center;
+}
+
+.gallery-image-container img {
+    max-width: 28.5%; /* Ensure images scale within container */
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 5px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    opacity: 1;
+    transition: transform 0.3s, filter 0.5s, opacity 0.3s ease;
+}
+
+.gallery-image-container img:hover {
+    filter: grayscale(0%);
+    opacity: 1; /* Increase opacity on hover */
+}
+
+/* Style specifically for landscape image */
+.gallery-image-container img.landscape {
+    max-width: 60%; /* Ensure landscape image takes more space */
+}
+
+/* Enlarged image display */
+.full-img {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    text-align: center;
+    overflow: auto; /* Enable scrolling for large images */
+}
+
+.full-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 80%; /* Adjust maximum width as needed */
+    max-height: 80%; /* Adjust maximum height as needed */
+    height: 80vh; /* Use viewport height to center vertically */
+    box-sizing: border-box;
+    padding: 20px; /* Optional: Add padding for better visual appearance */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    z-index: 2;
+}
+
+.full-image-container img {
+    max-width: 100%; /* Ensure images scale within container */
+    max-height: 100%; /* Ensure images scale within container */
+    object-fit: contain; /* Maintain aspect ratio and fit within container */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.full-img .close-btn {
+    margin-top: 20px;
+    color: #F2F2F2;
+    font-size: 24px;
+    font-weight: bold; /* Make the close button text bold */
+    cursor: pointer;
+    z-index: 1001; /* Ensure close button is above the image */
+    transition: color 0.3s; /* Add transition effect for color change */
+}
+
+.full-img .close-btn:hover {
+    color: #FA2A55; /* Change color to white on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 990px) {
+    .gallery {
+        max-width: 100%;
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+    .gallery-image-container img {
+        max-width: calc(50% - 10px); /* Adjust image width for smaller screens */
+    }
+    .gallery-image-container img.landscape {
+        max-width: calc(100% - 10px);  /* Ensure landscape image takes more space */
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-image-container img {
+        max-width: calc(100% - 10px); /* Adjust image width for smaller screens */
+    }
+    .gallery-image-container img.landscape {
+        max-width: calc(100% - 20px);  /* Ensure landscape image takes more space */
+    }
+}
+
+.vfx-wrapper {
+    position: relative; /* Use relative positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the vfx-container and text horizontally */
+    text-align: center;
+
+}
+
+.vfx-container {
+    position: relative; /* Use relative positioning inside the wrapper */
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0; /* Ensure no extra bottom margin */
+}
+
+.vfx-video {
+    max-width: 360px; /* Change this to your desired max width */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1.5rem; /* Add some space between the video and the title */
+}
+
+.vfx-position {
+    top: 0px;
+    max-width: 720px;
+    width: 100%; /* Ensures the container width doesn't exceed 720px */
+    margin: 0rem auto; /* Centers the element horizontally */
+    position: relative;
+}

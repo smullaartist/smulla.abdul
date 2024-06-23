@@ -1,0 +1,118 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Global Styles */
+.container3denvironments {
+    padding: 20px;
+    position: relative;
+    margin-top: -42.5rem; /* Adjust as needed */
+    z-index: 2;
+}
+
+.slider-wrapper {
+    max-width: 720px;
+    margin: -0.75rem auto -1rem auto;
+    position: relative;
+    z-index: 3;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img,
+.slider video {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    max-width: 720px;
+    border-radius: 0.5rem;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #F2F2F2;
+    opacity: 0.5;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a.active {
+    opacity: 1;
+    background-color: #FA2A55;
+}
+
+/* Individual Section Styles */
+.Home-col-1,
+.Deceit-col-1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.Home-title,
+.Deceit-title {
+    font-size: 19.2px;
+}
+
+.Home-col-1 p,
+.Deceit-col-1 p {
+    width: 100%;
+    max-width: 720px;
+    margin: 0.25rem auto 2rem auto;
+    text-align: left;
+    font-size: 16px;
+    color: white;
+}
+
+.deceit-slider {
+    margin-bottom: 2.5rem;
+}
+
+.home-slider {
+    margin-bottom: 2.5rem;
+}
+
+.home-gameplay-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+    margin: 0 auto 2rem auto;
+}
+
+.home-gameplay-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.5rem;
+}
+
+

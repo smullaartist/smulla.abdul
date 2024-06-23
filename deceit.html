@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9ad003344.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="3denvironments.css">
+    <title>Deceit</title>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="images/logo.png" class="logo" alt="Logo">
+    </div>
+
+    <section class="showcase">
+        <div class="video-container-dark">
+            <video src="deceit/videos/videoBackground.mp4" autoplay muted loop></video>
+        </div>
+
+        <div class="content">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about-me.html">ABOUT ME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li class="small-screen-only"><a href="3denvironments.html">3D ENVIRONMENTS</a></li>
+                    <li class="small-screen-only" ><a href="deceit.html" style="color: #FA2A55;">DECEIT</a></li>
+                    <li class="small-screen-only"><a href="home.html">HOME (AN ABANDONED ORPHANAGE)</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <h2 class="env-title">DECEIT</h2>
+        </div>
+    </section>
+
+    <section class="container3denvironments">
+        <div class="deceit-position">
+            <div class="deceit-description">
+                <p>
+                    Deceit is a 3D environment based on an underground mine and a glow worm cave, inspired by the fascinating 
+                    glow worm caves found in real life. This creation started as a university assignment and after revisiting 
+                    to make thorough tweaks and refinements, I've re-rendered and showcased the finished version here. 
+                </p>
+            </div>
+        </div>
+        <div class="slider-wrapper">
+            <div class="gameplay-title">Renders</div>
+            <div class="slider deceit-slider">
+                <img id="Deceitslide-1" src="deceit/images/render1.jpg" alt="DeceitRender1">
+                <img id="Deceitslide-2" src="deceit/images/render2.jpg" alt="DeceitRender2">
+                <video id="Deceitslide-3" src="deceit/videos/render3.mp4" alt="DeceitRender3" autoplay loop muted></video>
+                <img id="Deceitslide-4" src="deceit/images/render4.jpg" alt="DeceitRender4">
+                <img id="Deceitslide-5" src="deceit/images/render5.jpg" alt="DeceitRender5">
+                <video id="Deceitslide-6" src="deceit/videos/render6.mp4" alt="DeceitRender6" autoplay loop muted></video>
+                <img id="Deceitslide-7" src="deceit/images/render7.jpg" alt="DeceitRender7">
+                <video id="Deceitslide-8" src="deceit/videos/render8.mp4" alt="DeceitRender8" autoplay loop muted></video>
+                <img id="Deceitslide-9" src="deceit/images/render9.jpg" alt="DeceitRender9">
+            </div>
+            <div class="slider-nav">
+                <a href="#Deceitslide-1"></a>
+                <a href="#Deceitslide-2"></a>
+                <a href="#Deceitslide-3"></a>
+                <a href="#Deceitslide-4"></a>
+                <a href="#Deceitslide-5"></a>
+                <a href="#Deceitslide-6"></a>
+                <a href="#Deceitslide-7"></a>
+                <a href="#Deceitslide-8"></a>
+                <a href="#Deceitslide-9"></a>
+            </div>
+        </div>
+
+
+        <div class="text-position">
+            <div class="text-title">Behind the Process</div>
+            <div class="text-description">
+                <p>
+                    Everything in this environment, from the modeling to the texturing, was made myself, with additional assets sourced from Epic's Quixel library. The environment features 
+                    two sections: the mine and the glow room cave. The mine includes a storage facility with a loading dock, a mineshaft and various storage items positioned 
+                    around the area. The mine's lighting comes from the wall and ceiling lamps placed throughout the entire cave. In the glow worm cave, the illumination comes from the Arachnocampa 
+                    luminosa, a type of fungus found in real-life glow worm caves. To replicate the illumination, I modelled basic cylindrical objects and applied an emissive material. 
+                    I then placed a light source in between a group of these to provide lighting.  
+                </p>
+            </div>
+        </div>
+
+        <div class="text-position">
+            <div class="text-title">Production Details</div>
+            <div class="text-description">
+                <ul>
+                    <li><strong>Software:</strong> 3DS Max, Adobe Substance Painter & Unreal Engine 5</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-position">
+            <div class="text-description-center">
+                <p>
+                    Published on <a href="https://www.artstation.com/artwork/LR1PnR" style="font-weight: bold; color: #FA2A55; text-decoration: none;" target="_blank" class="link">ArtStation</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Button -->
+    <a href="home.html" class="next-button">
+        HOME (AN ABANDONED ORPHANAGE)<i class="fas fa-arrow-right" style="margin-left: 16px;"></i>
+    </a>
+
+    <a href="3denvironments.html" class="back-button">
+        <i class="fas fa-arrow-left" style="margin-right: 16px;"></i> 3D ENVIRONMENTS
+    </a>
+    
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        var barsIcon = document.querySelector(".fa-bars");
+        var timesIcon = document.querySelector(".fa-times");
+    
+        function openmenu() {
+            sidemenu.classList.add("show");
+            barsIcon.style.display = "none";
+            timesIcon.style.display = "block";
+        }
+    
+        function closemenu() {
+            sidemenu.classList.remove("show");
+            barsIcon.style.display = "block";
+            timesIcon.style.display = "none";
+        }
+    
+        // Event listeners for icons
+        barsIcon.addEventListener("click", openmenu);
+        timesIcon.addEventListener("click", closemenu);
+    
+        // Handle initial window size to show/hide icons based on screen size
+        function checkWindowSize() {
+            if (window.innerWidth > 990) {
+                barsIcon.style.display = "none";
+                timesIcon.style.display = "none";
+                sidemenu.classList.remove("show");
+            } else {
+                barsIcon.style.display = "block";
+                timesIcon.style.display = "none";
+            }
+        }
+    
+        checkWindowSize();
+    
+        // Handle window resize to maintain proper icon visibility
+        window.addEventListener("resize", function() {
+            checkWindowSize();
+        });
+
+        // Slider functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderNavLinks = document.querySelectorAll('.slider-nav a');
+            const sliderItems = document.querySelectorAll('.deceit-slider img, .deceit-slider video');
+
+            let currentIndex = 0;
+            let timer;
+
+            function showItem(index) {
+                sliderItems.forEach((item, i) => {
+                    if (i === index) {
+                        item.style.display = 'block';
+                        if (item.tagName === 'VIDEO') {
+                            item.play();
+                            item.onended = nextItem; // Move to the next slide when the video ends
+                        }
+                        item.classList.add('show');
+                    } else {
+                        item.style.display = 'none';
+                        if (item.tagName === 'VIDEO') {
+                            item.pause();
+                            item.onended = null; // Remove the event listener to avoid memory leaks
+                        }
+                        item.classList.remove('show');
+                    }
+                });
+
+                sliderNavLinks.forEach((nav, i) => {
+                    if (i === index) {
+                        nav.classList.add('active');
+                    } else {
+                        nav.classList.remove('active');
+                    }
+                });
+
+                resetTimer(); // Reset the timer whenever a new item is shown
+            }
+
+            function nextItem() {
+                currentIndex = (currentIndex + 1) % sliderItems.length;
+                showItem(currentIndex);
+            }
+
+            function resetTimer() {
+                clearInterval(timer);
+                const currentItem = sliderItems[currentIndex];
+                if (currentItem.tagName === 'VIDEO') {
+                    timer = setTimeout(nextItem, currentItem.duration * 1000); // Wait for video duration
+                } else {
+                    timer = setInterval(nextItem, 5000); // Switch to the next item after 5 seconds
+                }
+            }
+
+            sliderNavLinks.forEach((link, index) =>
+            {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    currentIndex = index;
+                    showItem(currentIndex);
+                });
+            });
+
+            // Initialize the slider
+            showItem(currentIndex);
+        });
+    </script>
+</body>
+</html>

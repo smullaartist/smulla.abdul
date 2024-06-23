@@ -1,0 +1,169 @@
+.projects-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Ensure images are above the video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Add padding on left and right */
+}
+
+@media (max-width: 990px) {
+    .showcase {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .projects-container {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 247.5px; /* Increase top margin to move images lower */
+        padding-bottom: 20px;
+    }
+}
+
+.img-container {
+    position: relative;
+    margin: 25px; /* Adjust spacing between images */
+    border-radius: 5px;
+    overflow: hidden; /* Ensure text doesn't overflow */
+    z-index: 1;
+}
+
+.img {
+    width: 285px; /* Initial width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.img:hover {
+    transform: scale(1.1); /* Scale image on hover */
+    filter: brightness(0.6);
+}
+
+.img-container:hover span {
+    opacity: 1;
+}
+
+.img-container span {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 23.04px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 15px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    pointer-events: none;
+}
+
+.showreel-container {
+    position: relative;
+    margin: 25px; /* Adjust spacing between images */
+    border-radius: 5px;
+    overflow: hidden; /* Ensure text doesn't overflow */
+    z-index: 1;
+    cursor: pointer;
+}
+
+.imgShowreel {
+    width: 285px; /* Initial width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    transition: transform 0.3s ease;
+} 
+
+.imgShowreel:hover {
+    transform: scale(1.1); /* Scale image on hover */
+    filter: brightness(0.6);
+}
+
+.showreel-container:hover span {
+    opacity: 1;
+}
+
+.showreel-container span {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 23.04px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 15px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    pointer-events: none;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow-y: auto; /* Enable scrolling within the modal */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 1280px; /* Increased max-width for larger screens */
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px; /* Optional: Add some rounding for aesthetic */
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+    border-radius: 5px; /* Optional: Add some rounding for aesthetic */
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: -27.5px;
+    font-size: 39.81px;
+    font-weight: bold;
+    color: #F2F2F2;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #FA2A55;
+    text-decoration: none;
+}
+
+/* Close button positioning for small screens */
+@media (max-width: 990px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .close {
+        font-size: 27.65px; /* Adjust font-size for smaller screens */
+        padding: 8px 16px;
+    }
+}
