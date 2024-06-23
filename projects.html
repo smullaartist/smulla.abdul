@@ -1,117 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/a9ad003344.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="projects.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a9ad003344.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="projects.css" />
     <title>Projects</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="logo-container">
-        <img src="images/logo.png" class="logo" alt="Logo">
+      <img src="images/logo.png" class="logo" alt="Logo" />
     </div>
     <h2 class="env-title">PROJECTS</h2>
+
     <section class="showcase">
-        <div class="video-container">
-            <video src="videos/background.mp4" autoplay muted loop></video>
+      <div class="video-container">
+        <video src="videos/background.mp4" autoplay muted loop></video>
+      </div>
+      <div class="content">
+        <nav>
+          <ul id="sidemenu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about-me.html">ABOUT ME</a></li>
+            <li><a href="projects.html" class="active">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+      </div>
+      <div class="projects-container">
+        <div
+          class="showreel-container"
+          onclick="openVideoModal('https://www.youtube.com/embed/_BXLwFhZ6P8')"
+        >
+          <img
+            src="images/imgShowreel.jpg"
+            class="imgShowreel"
+            alt="Showreel"
+          />
+          <span>UNIVERSITY SHOWREEL (2021-2023)</span>
         </div>
-        <div class="content">
-            <nav>
-                <ul id="sidemenu">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about-me.html">ABOUT ME</a></li>
-                    <li><a href="projects.html" class="active">PROJECTS</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
+        <div class="img-container">
+          <a href="projects.html"
+            ><img src="images/img3DModels.jpg" class="img" alt="3D Models"
+          /></a>
+          <span>3D MODELS (TBA)</span>
         </div>
-        <div class="projects-container">
-            <div class="showreel-container" onclick="openVideoModal('https://www.youtube.com/embed/_BXLwFhZ6P8')">
-                <img src="images/imgShowreel.jpg" class="imgShowreel" alt="Showreel">
-                <span>UNIVERSITY SHOWREEL (2021-2023)</span>
-            </div>
-            <div class="img-container">
-                <a href="projects.html"><img src="images/img3DModels.jpg" class="img" alt="3D Models"></a>
-                <span>3D MODELS (TBA)</span>
-            </div>
-            <div class="img-container">
-                <a href="3denvironments.html"><img src="images/img3DEnvironments.jpg" class="img" alt="3D Environments"></a>
-                <span>3D ENVIRONMENTS</span>
-            </div>
-            <div class="img-container">
-                <a href="photography&videography.html"><img src="images/imgPhotography&Videography.jpg" class="img" alt="Photography & Videography"></a>
-                <span>PHOTOGRAPHY & VIDEOGRAPHY</span>
-            </div>
+        <div class="img-container">
+          <a href="3denvironments.html"
+            ><img
+              src="images/img3DEnvironments.jpg"
+              class="img"
+              alt="3D Environments"
+          /></a>
+          <span>3D ENVIRONMENTS</span>
         </div>
+        <div class="img-container">
+          <a href="photography&videography.html"
+            ><img
+              src="images/imgPhotography&Videography.jpg"
+              class="img"
+              alt="Photography & Videography"
+          /></a>
+          <span>PHOTOGRAPHY & VIDEOGRAPHY</span>
+        </div>
+      </div>
     </section>
 
     <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <iframe id="videoFrame" width="1024" height="576" src="" frameborder="0" allowfullscreen></iframe>
-            <span class="close" onclick="closeVideoModal()">&times;</span>
-        </div>
+      <div class="modal-content">
+        <iframe
+          id="videoFrame"
+          width="1024"
+          height="576"
+          src=""
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <span class="close" onclick="closeVideoModal()">&times;</span>
+      </div>
     </div>
-    
-    <script>     
-        var sidemenu = document.getElementById("sidemenu");
-        var barsIcon = document.querySelector(".fa-bars");
-        var timesIcon = document.querySelector(".fa-times");
-    
-        function openmenu() {
-            sidemenu.classList.add("show");
-            barsIcon.style.display = "none";
-            timesIcon.style.display = "block";
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      var barsIcon = document.querySelector(".fa-bars");
+      var timesIcon = document.querySelector(".fa-times");
+
+      function openmenu() {
+        sidemenu.classList.add("show");
+        barsIcon.style.display = "none";
+        timesIcon.style.display = "block";
+      }
+
+      function closemenu() {
+        sidemenu.classList.remove("show");
+        barsIcon.style.display = "block";
+        timesIcon.style.display = "none";
+      }
+
+      // Event listeners for icons
+      barsIcon.addEventListener("click", openmenu);
+      timesIcon.addEventListener("click", closemenu);
+
+      // Handle initial window size to show/hide icons based on screen size
+      function checkWindowSize() {
+        if (window.innerWidth > 990) {
+          barsIcon.style.display = "none";
+          timesIcon.style.display = "none";
+          sidemenu.classList.remove("show");
+        } else {
+          barsIcon.style.display = "block";
+          timesIcon.style.display = "none";
         }
-    
-        function closemenu() {
-            sidemenu.classList.remove("show");
-            barsIcon.style.display = "block";
-            timesIcon.style.display = "none";
-        }
-    
-        // Event listeners for icons
-        barsIcon.addEventListener("click", openmenu);
-        timesIcon.addEventListener("click", closemenu);
-    
-        // Handle initial window size to show/hide icons based on screen size
-        function checkWindowSize() {
-            if (window.innerWidth > 990) {
-                barsIcon.style.display = "none";
-                timesIcon.style.display = "none";
-                sidemenu.classList.remove("show");
-            } else {
-                barsIcon.style.display = "block";
-                timesIcon.style.display = "none";
-            }
-        }
-    
+      }
+
+      checkWindowSize();
+
+      // Handle window resize to maintain proper icon visibility
+      window.addEventListener("resize", function () {
         checkWindowSize();
-    
-        // Handle window resize to maintain proper icon visibility
-        window.addEventListener("resize", function() {
-            checkWindowSize();
-        });
+      });
 
-        // JavaScript functions for modal
-        function openVideoModal(videoUrl) {
-            var modal = document.getElementById('videoModal');
-            var videoFrame = document.getElementById('videoFrame');
-            videoFrame.src = videoUrl;
-            modal.style.display = 'flex'; // Use 'flex' to center vertically
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        }
+      // JavaScript functions for modal
+      function openVideoModal(videoUrl) {
+        var modal = document.getElementById("videoModal");
+        var videoFrame = document.getElementById("videoFrame");
+        videoFrame.src = videoUrl;
+        modal.style.display = "flex"; // Use 'flex' to center vertically
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+      }
 
-        function closeVideoModal() {
-            var modal = document.getElementById('videoModal');
-            var videoFrame = document.getElementById('videoFrame');
-            modal.style.display = 'none';
-            videoFrame.src = ''; // Reset video source
-            document.body.style.overflow = ''; // Restore scrolling
-        }
+      function closeVideoModal() {
+        var modal = document.getElementById("videoModal");
+        var videoFrame = document.getElementById("videoFrame");
+        modal.style.display = "none";
+        videoFrame.src = ""; // Reset video source
+        document.body.style.overflow = ""; // Restore scrolling
+      }
     </script>
-</body>
+  </body>
 </html>

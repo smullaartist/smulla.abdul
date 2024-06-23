@@ -1,44 +1,44 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Gill Sans Extrabold", monospace;
-    line-height: 1.5;
-    background: #0E0E0C;
-    color: #F2F2F2;
-    overflow-x: hidden;
+  font-family: "Gill Sans Extrabold", monospace;
+  line-height: 1.5;
+  background: #0e0e0c;
+  color: #f2f2f2;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* Header Section */
 .logo-container {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .env-title {
-    text-align: center; /* Center the text horizontally */
-    font-size: 27.65px; /* Set the font size */
-    font-weight: bold; /* Make the text bold */
-    color: #FA2A55; /* Set the text color */
-    position: absolute; /* Use absolute positioning */
-    top: 50%; /* Align to the middle vertically */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center precisely */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Display ellipsis (...) if text overflows */
-    margin: -252.5px 0 0; /* Adjust vertical margins */
-    max-width: 90%; /* Limit maximum width to ensure readability */
+  text-align: center; /* Center the text horizontally */
+  font-size: 27.65px; /* Set the font size */
+  font-weight: bold; /* Make the text bold */
+  color: #fa2a55; /* Set the text color */
+  position: absolute; /* Use absolute positioning */
+  top: 50%; /* Align to the middle vertically */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center precisely */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Display ellipsis (...) if text overflows */
+  margin: -252.5px 0 0; /* Adjust vertical margins */
+  max-width: 90%; /* Limit maximum width to ensure readability */
 }
 
 /* Text Styles */
@@ -46,537 +46,633 @@ body {
 .deceit-position,
 .home-position,
 .joji-position {
-    max-width: 720px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .text-title,
 .deceit-title,
 .gameplay-title,
 .joji-title {
-    font-size: 23.04px;
-    font-weight: bold;
-    color: #F2F2F2;
-    text-align: center;
-    margin-bottom: 0.25rem;
+  font-size: 23.04px;
+  font-weight: bold;
+  color: #f2f2f2;
+  text-align: center;
+  margin-bottom: 0.25rem;
 }
 
 .text-description,
 .deceit-description,
 .home-description,
 .joji-description {
-    font-size: 16px;
-    color: #F2F2F2;
-    margin-bottom: 1.5rem;
+  font-size: 16px;
+  color: #f2f2f2;
+  margin-bottom: 1.5rem;
 }
 
 .text-description-center {
-    font-size: 16px;
-    color: #F2F2F2;
-    margin-bottom: 2rem;
-    text-align: center; /* Aligns text content to the center */
+  font-size: 16px;
+  color: #f2f2f2;
+  margin-bottom: 2rem;
+  text-align: center; /* Aligns text content to the center */
 }
 
 @media (max-width: 990px) {
-    .env-title {
-        font-size: 23.04px; /* Decrease font size for smaller screens */
-    }
+  .env-title {
+    font-size: 23.04px; /* Decrease font size for smaller screens */
+  }
 }
 
 .showcase {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #F2F2F2;
-    overflow: hidden;
-    scroll-behavior: smooth;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f2f2f2;
+
+  scroll-behavior: smooth;
+}
+
+.contact {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f2f2f2;
+
+  scroll-behavior: smooth;
+}
+
+.about {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f2f2f2;
+  scroll-behavior: smooth;
 }
 
 #sidemenu li {
-    color: #F2F2F2;
-    text-decoration: none;
-    font-size: 19.2px;
-    margin: 10px 100;
-    text-align: center;
-    position: relative;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 19.2px;
+  margin: 10px 100;
+  text-align: center;
+  position: relative;
 }
 
 .video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    filter: brightness(0.6); /* Darken the background video */
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: brightness(0.6); /* Darken the background video */
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  poitner-events: none;
 }
 
 .video-container-dark {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    filter: brightness(0.3); /* Darken the background video */
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: brightness(0.25); /* Darken the background video */
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .video-container-dark video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-li{
-    top: -275px;
+li {
+  top: -275px;
 }
 
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 16px;
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 16px;
 }
 
-nav ul li a{
-    color: #F2F2F2;
-    text-decoration: none;
-    font-size: 19.2px; 
-    font-weight: bold;
-    position: relative;
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 19.2px;
+  font-weight: bold;
+  position: relative;
 }
 
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #FA2A55;
-    position: absolute;
-    left: 0%;
-    bottom: -6px;
-    transition: 0.75s;
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #fa2a55;
+  position: absolute;
+  left: 0%;
+  bottom: -6px;
+  transition: 0.75s;
 }
 
 nav ul li a:hover::after {
-    width: 50%
+  width: 50%;
 }
 
 nav li a.active {
-    color: #FA2A55;
+  color: #fa2a55;
 }
 
 .social-icons-container {
-    position: absolute;
-    left: 50%;
-    bottom: 40px;
-    transform: translateX(-50%);
-    z-index: 1; /* Ensure social icons are above the video */
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 100; /* Ensure social icons are above the video */
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icons a {
-    text-decoration: none;
-    font-size: 27.65px;
-    margin: 0 10px;
-    color: #F2F2F2;
-    transition: transform 0.5s;
+  text-decoration: none;
+  font-size: 27.65px;
+  margin: 0 10px;
+  color: #f2f2f2;
+  transition: transform 0.5s;
 }
 
 .social-icons a:hover {
-    color: #FA2A55;
-    transform: translateY(-5px);
+  color: #fa2a55;
+  transform: translateY(-5px);
 }
 
-nav .fas{
-    display: none;
+nav .fas {
+  display: none;
 }
 
 /* about me */
 .containeraboutme,
 .containercontact {
-    padding: 20px;
-    position: relative;
-    margin-top: -42.5rem; /* Adjust as needed */
-    z-index: 2;
+  padding: 20px;
+  position: relative;
+  margin-top: -44rem; /* Adjust as needed */
+  z-index: 2;
 }
 
 .tab-titles {
-    display: flex;
-    margin: 20px 0 40px;
+  display: flex;
+  margin: 20px 0 40px;
 }
 
 .tab-links {
-    margin-right: 50px;
-    font-size: 19.2px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
+  margin-right: 50px;
+  font-size: 19.2px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
 }
 
 .tab-links::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #FA2A55;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #fa2a55;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
 }
 
 .tab-links.active-link::after {
-    width: 50%;
+  width: 50%;
 }
 
 .tab-contents ul li {
-    list-style: none;
-    margin: 10px 0;
+  list-style: none;
+  margin: 10px 0;
 }
 
 .tab-contents ul li span {
-    color: #FA2A55;
-    font-size: 16px;
-    font-weight: bold;
+  color: #fa2a55;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .tab-contents {
-    display: none;
+  display: none;
 }
 
 .tab-contents.active-tab {
-    display: block;
+  display: block;
 }
 
-/* Contact Section */
+/* contact */
 #contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Ensure it takes the full width of the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  width: 100%; /* Ensure it takes the full width of the page */
 }
 
-/* Container */
 .container {
-    width: 100%;
-    max-width: 2000px;
-    margin: auto;
+  width: 100%;
+  max-width: 2000px;
+  margin: auto;
 }
 
-/* Row */
 .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px;
 }
 
-/* Contact Left and Right */
 .contact-left,
 .contact-right {
-    flex-basis: 100%;
+  flex-basis: 100%;
 }
 
-/* Contact Left Paragraph */
 .contact-left p {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .contact-left p i {
-    color: #FA2A55;
-    margin-right: 15px;
-    font-size: 23.04px;
+  color: #fa2a55;
+  margin-right: 15px;
+  font-size: 23.04px;
 }
 
-/* Contact Right Button Container */
 .contact-right .button-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
 }
 
-/* Contact Right Form */
 .contact-right form {
-    max-width: 755px; /* Restrict the form to a max-width */
-    text-align: center; /* Center align the form content */
-    margin: auto; /* Center the form container */
+  max-width: 755px; /* Restrict the form to a max-width */
+  text-align: center; /* Center align the form content */
+  margin: auto; /* Center the form container */
 }
 
-/* Buttons */
 .btn,
 .btn.btn2 {
-    display: block;
-    margin: 0 auto; /* Center horizontally */
-    width: fit-content;
-    padding: 12.5px 30px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    color: #F2F2F2;
-    transition: background 0.5s;
-    font-family: Arial, sans-serif; /* Specify your preferred font stack */
+  display: block;
+  margin: 0px auto; /* Reduced from 50px to 20px to move it higher */
+  width: fit-content;
+  padding: 12.5px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #f2f2f2;
+  transition: background 0.5s;
+  font-family: Arial, sans-serif; /* Specify your preferred font stack */
 }
 
 .btn:hover,
 .btn.btn2:hover {
-    background: #FA2A55;
+  background: #fa2a55;
 }
 
 .btn.btn2 {
-    background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 auto; /* Center horizontally */
 }
 
 .btn.btn2:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-/* Form Inputs and Textarea */
 form input,
 form textarea {
-    width: 100%; /* Set the width to 100% */
-    max-width: 100%; /* Ensure it doesn't exceed the container's width */
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 12.5px 0;
-    color: #F2F2F2;
-    font-size: 16px;
-    border-radius: 5px;
-    box-sizing: border-box; /* Ensures padding is included in the width calculation */
-    font-family: "Gill Sans Extrabold", monospace; /* Use Gill Sans Extrabold */
+  width: 100%; /* Set the width to 100% */
+  max-width: 100%; /* Ensure it doesn't exceed the container's width */
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 12.5px 0;
+  color: #f2f2f2;
+  font-size: 16px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
 
-/* Textarea Specific Styles */
+/* Increase textarea width */
 form textarea {
-    height: 170px; /* Set a fixed height */
-    resize: none; /* Disable resizing */
-    overflow-y: auto; /* Add vertical scrollbar when content exceeds the height */
-    display: block; /* Ensure it behaves as a block element */
+  width: 100%; /* Set width to 100% of the container */
+  height: 170px; /* Set a fixed height */
+  resize: none; /* Disable resizing */
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds the height */
+  margin: 0 auto; /* Center the textarea horizontally */
+  display: block; /* Ensure it behaves as a block element */
 }
 
-/* Form Button */
 form .btn2 {
-    padding: 14px 60px;
-    font-size: 19.2px;
-    cursor: pointer;
-    text-align: center; /* Center the text inside the button */
-    border: none; /* Remove border */
+  padding: 14px 60px;
+  font-size: 19.2px;
+  margin-top: 0px; /* Adjusted margin-top to move the button higher */
+  cursor: pointer;
+  display: block;
+  margin: 0 auto; /* Centers the button horizontally */
+  text-align: center; /* Center the text inside the button */
+  border: none; /* Remove border */
+  font-family: Arial, sans-serif; /* Specify your preferred font stack */
 }
 
-/* Placeholder Text Styles */
+/* Form input and textarea styles */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 12.5px 0;
+  color: #f2f2f2;
+  font-size: 16px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: "Gill Sans Extrabold", monospace; /* Use Gill Sans Extrabold */
+}
+
+/* Placeholder text styles */
 form input[type="text"]::placeholder,
 form input[type="email"]::placeholder,
 form textarea::placeholder {
-    color: #a9a9a9;
-    font-family: "Gill Sans Extrabold", monospace; /* Use Gill Sans Extrabold for placeholders */
+  color: #a9a9a9;
+  font-family: "Gill Sans Extrabold", monospace; /* Use Gill Sans Extrabold for placeholders */
 }
 
+video {
+  pointer-events: none;
+}
 
 @media screen and (max-width: 990px) {
-    nav .fas {
-        display: block;
-        font-size: 27.65px;
-        cursor: pointer;
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        color: #F2F2F2; /* Ensure icon color matches the background */
-    }
+  nav .fas {
+    display: block;
+    font-size: 27.65px;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #f2f2f2; /* Ensure icon color matches the background */
+  }
 
-    nav ul {
-        background: rgba(0, 0, 0, 0.8); /* Transparent black background */
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 0px;
-        z-index: 10;
-        transition: right 0.5s;
-    }
+  .about nav .fas {
+    top: -45%;
+    z-index: 100;
+  }
 
-    nav ul li {
-        display: inline-block;
-        list-style: none; /* Remove default list styling */
-        margin: 5px 20px;
-    }
+  .about nav .fa-times {
+    position: absolute;
+    top: 5%;
+  }
 
-    nav ul.show {
-        right: 0;
-    }
+  nav ul {
+    background: rgba(0, 0, 0, 1); /* Transparent black background */
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 0px;
+    z-index: 1000;
+    transition: right 0.5s;
+  }
 
-    nav .fas.fa-bars,
-    nav .fas.fa-times {
-        display: block; /* Show bars and times icons on small screens */
-    }
+  nav ul li {
+    display: inline-block;
+    list-style: none; /* Remove default list styling */
+    margin: 5px 20px;
+  }
 
-    nav .fas.fa-bars:hover,
-    nav .fas.fa-times:hover {
-        color: #FA2A55; /* Change color on hover */
- 
-    }
+  nav ul.show {
+    right: 0;
+  }
 
-    nav .fas.fa-times {
-        display: none; /* Initially hide the close icon */
-    }
+  nav .fas.fa-bars {
+    display: block; /* Show bars and times icons on small screens */
+  }
 
-    li{
-        top: 107.5px;
-    }
-    
+  nav .fas.fa-bars:hover,
+  nav .fas.fa-times:hover {
+    color: #fa2a55; /* Change color on hover */
+  }
+
+  nav .fas.fa-times {
+    display: none; /* Initially hide the close icon */
+  }
+
+  li {
+    top: 107.5px;
+  }
 }
 
 /* Button Styles */
 .next-button,
 .back-button {
-    position: fixed;
-    color: #F2F2F2;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 5;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease, right 0.3s ease, top 0.3s ease;
+  position: fixed;
+  color: #f2f2f2;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, right 0.3s ease, top 0.3s ease;
 }
 
 .next-button:hover,
 .back-button:hover {
-    background-color: #FA2A55;
+  background-color: #fa2a55;
 }
 
 .next-button i,
 .back-button-button i {
-    margin-right: 4px;
+  margin-right: 4px;
 }
 
 .next-button {
-    right: 30px;
-    top: calc(100% - 80px);
+  right: 30px;
+  top: calc(100% - 80px);
 }
 
 .back-button-button {
-    left: 30px;
-    top: calc(100% - 80px);
+  left: 30px;
+  top: calc(100% - 80px);
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 990px) {
-    .next-button,
-    .back-button {
-        right: 10px;
-        left: 10px;
-        top: calc(100% - 60px);
-        padding: 8px 16px;
-        font-size: 14px;
-    }
+  .next-button,
+  .back-button {
+    right: 10px;
+    left: 10px;
+    top: calc(100% - 60px);
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 990px) {
-    .next-button,
-    .back-button {
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 16px;
-    }
+  .next-button,
+  .back-button {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
 
-    .next-button {
-        right: 40px;
-    }
+  .next-button {
+    right: 40px;
+  }
 
-    .back-button {
-        left: 40px;
-    }
+  .back-button {
+    left: 40px;
+  }
 }
 
 /* Media Queries for Small Screens */
 @media (max-width: 990px) {
-    .next-button,
-    .back-button {
-        display: none;
-    }
-    .small-screen-only {
-        display: block;
-    }
+  .about .env-title {
+    margin: 0px;
+    overflow: auto;
+    top: -21%;
+  }
+
+  .env-title {
+    margin: 0px;
+    overflow: auto;
+    top: 27%;
+    z-index: 10;
+  }
+
+  .showcase {
+    height: 100svh;
+  }
+
+  .contact {
+    height: 100svh;
+  }
+
+  .contact .social-icons-container {
+    bottom: -50%;
+    margin-bottom: 50px;
+    z-index: 100;
+  }
+
+  .containeraboutme,
+  .containercontact {
+    padding: 20px;
+    position: relative;
+    margin-top: -28rem; /* Adjust as needed */
+    z-index: 10;
+  }
+
+  .about {
+    height: 100svh;
+    top: 20rem;
+  }
+  .logo-container img {
+    width: 250px;
+    height: auto;
+  }
+  .next-button,
+  .back-button {
+    display: none;
+  }
+  .small-screen-only {
+    display: block;
+  }
 }
 
 /* Ensure the additional menu items are hidden on larger screens */
 @media (min-width: 990px) {
-    .small-screen-only {
-        display: none;
-    }
+  .small-screen-only {
+    display: none;
+  }
 }
 
 /* Media Queries for screen width below 1545px */
 @media (max-width: 1545px) {
-    .next-button,
-    .back-button {
-        justify-content: center;
-        align-items: center;
-        padding: 10px; /* Adjust padding as needed */
-        font-size: 0; /* Hide the text */
-        border: none; /* Remove any border if not needed */
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #F2F2F2;
-        text-decoration: none; /* Remove default underline */
-        border-radius: 20px;
-        transition: background-color 0.3s ease;
-    }
+  .next-button,
+  .back-button {
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Adjust padding as needed */
+    font-size: 0; /* Hide the text */
+    border: none; /* Remove any border if not needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f2f2f2;
+    text-decoration: none; /* Remove default underline */
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
 
-    .next-button i,
-    .back-button i {
-        font-size: 16px; /* Adjust the size of the arrow icon */
-    }
+  .next-button i,
+  .back-button i {
+    font-size: 16px; /* Adjust the size of the arrow icon */
+  }
 
-    .next-button::before,
-    .back-button::before {
-        content: '\f061'; /* FontAwesome arrow-right unicode */
-        font-family: "Font Awesome 5 Free"; /* Ensure the correct font family is used */
-        font-weight: 900; /* Use the solid variant */
-    }
+  .next-button::before,
+  .back-button::before {
+    content: "\f061"; /* FontAwesome arrow-right unicode */
+    font-family: "Font Awesome 5 Free"; /* Ensure the correct font family is used */
+    font-weight: 900; /* Use the solid variant */
+  }
 
-    .back-button::before {
-        content: '\f060'; /* FontAwesome arrow-left unicode */
-    }
+  .back-button::before {
+    content: "\f060"; /* FontAwesome arrow-left unicode */
+  }
 }
-
